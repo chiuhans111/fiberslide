@@ -13,7 +13,9 @@
         <p>光電三 106650004 邱柏翰</p>
       </page>
       <page>
-        <h2 pkey="title1">光纖回音廊模態</h2>
+        <h2>
+          <span>回音廊模態</span>
+        </h2>
         <h4>
           <span pkey="title_w">W</span>
           <span>ispering</span>
@@ -26,20 +28,36 @@
         </h4>
       </page>
       <page>
-        <h2 pkey="title1">光纖回音廊模態</h2>
+        <h3>
+          <span>回音廊模態</span>
+        </h3>
         <h4>
           <span pkey="title_w">W</span>
           <span pkey="title_g">G</span>
           <span pkey="title_m">M</span>
         </h4>
+      </page>
+      <page>
+        <h3>
+          <span>光纖</span>
+          <span>回音廊模態</span>
+          <span>特性</span>
+        </h3>
+        <p>WGM 的特性可以分為兩種模式來探討</p>
         <div class="row">
-          <div>
+          <div style="width:30%">
+            <h4>傳導衰減</h4>
             <img src="@/assets/fiber1.png" alt />
           </div>
-          <div>
+          <div style="width:30%">
+            <h4>相位差干涉</h4>
             <img src="@/assets/fiber2.png" alt />
           </div>
         </div>
+      </page>
+      <page>
+        <h4>衰減</h4>
+        <img src="@/assets/fiber1.png" alt />
       </page>
     </div>
   </div>
@@ -57,7 +75,7 @@ export default {
       animation_id: null,
       time: 0,
       page_count: 0,
-      len: 3
+      len: 0
     };
   },
   components: { page, display },
@@ -72,8 +90,8 @@ export default {
     },
     keydown(e) {
       console.log(e);
-      if (e.code == "ArrowDown") this.goPage(this.page_count + 1);
-      if (e.code == "ArrowUp") this.goPage(this.page_count - 1);
+      if (e.key == "ArrowDown") this.goPage(this.page_count + 1);
+      if (e.key == "ArrowUp") this.goPage(this.page_count - 1);
     },
 
     goPage(p) {
@@ -100,6 +118,7 @@ export default {
     addEventListener("resize", this.resize);
   },
   mounted() {
+    this.len = this.$refs.pages.children.length;
     this.goPage(0);
   },
   destroyed() {

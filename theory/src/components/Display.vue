@@ -77,7 +77,7 @@ export default {
 
       setTimeout(() => {
         from.map((x, i, arr) => {
-          let delay = Math.pow(i / arr.length, 2) * 500;
+          let delay = Math.pow(i / arr.length, 2) * 300;
           setTimeout(() => {
             if (x.paired == null) {
               x.el.setAttribute("kill", "true");
@@ -114,11 +114,11 @@ export default {
                   x.el.style.transition = "all 0.5s";
                 }, 250);
               } else
-                x.el.style.transition = "all 0.5s cubic-bezier(0.5,0,0.1,1)";
+                x.el.style.transition = "all 0.5s cubic-bezier(0.5,0,0.2,1)";
 
               x.el.style.transform = "translate(0,0)";
 
-              x.el.textContent = x.paired.el.textContent;
+              x.el.innerHTML = x.paired.el.innerHTML;
               x.el.src = x.paired.el.src;
               x.el.href = x.paired.el.href;
             }

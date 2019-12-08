@@ -4,11 +4,20 @@
       <span pkey="Page-leftTopLine" class="line"></span>
       <slot name="parent"></slot>
     </div>
-    <p class="pagenum" v-if="pagenum>1">{{pagenum}}</p>
+    <p class="pagenum" time="10" v-if="pagenum>1">{{pagenum}}</p>
     <div id="content">
       <div class="container">
         <slot></slot>
       </div>
+    </div>
+    <div v-if="$slots.top!=null" id="content_top">
+      <div class="container">
+        <slot name="top"></slot>
+      </div>
+    </div>
+    <div v-if="$slots.footer!=null" id="content_footer">
+      <hr />
+      <slot name="footer"></slot>
     </div>
   </div>
 </template>
@@ -35,11 +44,24 @@ export default {
   overflow: hidden;
 }
 
-#content {
-  position: relative;
-  top: 48%;
+#content,
+#content_top {
   width: 100%;
-  transform: translate(0, -50%);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#content_footer {
+  width: 100%;
+  text-align: center;
+  bottom: 16px;
+  position: absolute;
+}
+
+#content_top {
+  pointer-events: none;
 }
 
 @media print {
@@ -66,6 +88,7 @@ export default {
   position: absolute;
   left: 0px;
   top: 32px;
+
   color: gray;
   display: flex;
   align-items: center;
@@ -79,6 +102,14 @@ export default {
   background: gray;
   border-top: solid 1px gray;
 }
+
+.container {
+  max-width: 1024px;
+  max-height: 100vh;
+  top: 48%;
+  transform: translate(0, -50%);
+  margin: auto;
+}
 </style>
 
 <style lang="scss">
@@ -88,10 +119,5 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-.container {
-  max-width: 1024px;
-  max-height: 100%;
-  margin: auto;
 }
 </style>

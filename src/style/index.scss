@@ -1,6 +1,7 @@
 @import "./reset.scss";
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,400,700&display=swap");
 @import "./typography.scss";
+@import "./layout.scss";
 
 * {
   position: relative;
@@ -24,10 +25,7 @@ body {
   }
 }
 
-.row {
-  justify-content: space-around;
-  display: flex;
-}
+
 
 img {
   max-width: 100%;

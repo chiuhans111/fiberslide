@@ -163,7 +163,7 @@ export default {
             if (x.paired == null) {
               x.el.setAttribute("kill", "true");
               x.el.style.opacity = 0;
-              x.el.style.transform = "scale(0.9)";
+              // x.el.style.transform = "scale(0.9)";
               x.el.style.zIndex = 0;
               safeTimeout(x.el, x.time, () => {
                 if (x.complex == "true") {
@@ -199,6 +199,7 @@ export default {
 
               x.el.style.background = "";
               x.el.style.background = targetStyle.background;
+              x.el.style.willChange = "left, top, transform";
 
               // Array.from(targetStyle).forEach(key => {
               //   x.el.style.setProperty(
@@ -210,7 +211,7 @@ export default {
 
               x.el.style.display = "block";
 
-              x.el.style.position = "absolute";
+              x.el.style.position = "fixed";
 
               x.el.style.left = targetBox.left + "px";
               x.el.style.top = targetBox.top + "px";
@@ -226,7 +227,7 @@ export default {
 
               if (x.new) {
                 x.el.style.opacity = 0;
-                x.el.style.transform = "translate(0, 20px)";
+                x.el.style.transform = "translate(0, 5px)";
                 safeTimeout(x.el, 10, () => {
                   x.el.style.transform = "translate(0, 0)";
                   x.el.style.opacity = targetStyle.opacity;

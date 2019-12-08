@@ -290,35 +290,35 @@
         <br />
         <p>
           <strong>
-            <span time="1000">彎曲</span>
-            <span time="1000">光纖</span>
+            <span time="500">彎曲</span>
+            <span time="500">光纖</span>
           </strong>
-          <span time="1000">形成</span>
-          <span time="1000">回音廊模態</span>
-          <span time="1000">，會使入射光在</span>
-          <strong time="1000">特定波長產生干涉</strong>
+          <span time="500">形成</span>
+          <span time="500">回音廊模態</span>
+          <span time="500">，會使入射光在</span>
+          <strong time="500">特定波長產生干涉</strong>
           <span>。</span>
         </p>
         <p>
-          <span time="1000">干涉波長會受</span>
-          <strong time="1000">彎曲半徑</strong>
-          <span time="1000">影響，因此可</span>
-          <span time="1000">製作</span>
-          <span time="1000">成</span>
-          <span time="1000">感測器</span>
-          <span time="1000">使用。</span>
+          <span time="500">干涉波長會受</span>
+          <strong time="500">彎曲半徑</strong>
+          <span time="500">影響，因此可</span>
+          <span time="500">製作</span>
+          <span time="500">成</span>
+          <span time="500">感測器</span>
+          <span time="500">使用。</span>
         </p>
         <p>
-          <span time="1000">彎曲半徑可以透過</span>
-          <strong time="1000">應力、壓力或溫度</strong>
-          <span time="1000">改變。</span>
+          <span time="500">彎曲半徑可以透過</span>
+          <strong time="500">應力、壓力或溫度</strong>
+          <span time="500">改變。</span>
         </p>
         <p>
-          <span time="1000">干涉的結果也可以</span>
-          <span time="1000">應用</span>
-          <span time="1000">於</span>
-          <strong time="1000">可調濾波器</strong>
-          <span time="1000">。</span>
+          <span time="500">干涉的結果也可以</span>
+          <span time="500">應用</span>
+          <span time="500">於</span>
+          <strong time="500">可調濾波器</strong>
+          <span time="500">。</span>
         </p>
 
         <div slot="footer">

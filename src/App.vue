@@ -65,9 +65,7 @@
         </div>
         <div class="row row-center" style="height:40vh;">
           <div class="col" style="width:40%; ">
-            <div>
-              <img src="@/assets/fiber1.png" alt />
-            </div>
+            <img src="@/assets/fiber1.png" alt />
           </div>
           <div class="col" style="width:40%">
             <img src="@/assets/fiber2.png" alt />
@@ -281,7 +279,7 @@
         <br />
         <br />
         <div style="height:35vh">
-          <h5>溫度感測</h5>
+          <h5>溫度感測</h5>
           <img src="@/assets/arch6.png" alt />
         </div>
       </page>
@@ -326,8 +324,8 @@
         <div slot="footer">
           <h6>論文來源</h6>
           <p block="true" class="quote">
-            國立高雄應用科技大學
-            機械與精密工程研究所 碩士論文 -
+            國立高雄應用科技大學
+            機械與精密工程研究所 碩士論文 -
             光纖回音廊模態感測器之製作及應用
             <br />Fabrication and Application of the Optical Fiber Sensor
             Based on Bending Induced Whispering

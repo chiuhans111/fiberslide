@@ -345,13 +345,36 @@ import page from "@/components/Page.vue";
 import display from "@/components/Display.vue";
 import demo1 from "@/components/interative/demo1.vue";
 
+function setCookie(cname, cvalue, ex) {
+  var d = new Date();
+  d.setTime(d.getTime() + ex * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return null;
+}
+
 export default {
   name: "app",
   data() {
     return {
       animation_id: null,
       time: 0,
-      page_count: localStorage.page_count || 0,
+      page_count: getCookie("pagecount") || 0,
       len: 0
     };
   },
@@ -385,7 +408,7 @@ export default {
 
       this.page_count = p;
       this.$refs.display.goto(this.$refs.pages.children[this.page_count]);
-      localStorage.page_count = p;
+      setCookie("pagecount", p, 200);
     },
     nextPage(e) {
       console.log(e);

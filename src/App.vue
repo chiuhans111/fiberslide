@@ -149,6 +149,17 @@
         </div>
         <demo1></demo1>
       </page>
+      <page>
+        <h6 slot="parent">
+          <span>光纖</span>
+          <span>回音廊模態</span>
+          <span>特性</span>
+          <span>：干涉頻譜</span>
+        </h6>
+        <div style="height:50vh">
+          <img src="@/assets/result.png" alt />
+        </div>
+      </page>
 
       <page>
         <h3>

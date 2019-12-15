@@ -2,11 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import "@/style/index.scss";
-import 'katex/dist/katex.min.css';
 
-import VueKatex from 'vue-katex'
+// import 'katex/dist/katex.min.css';
 
-Vue.use(VueKatex)
+// import VueKatex from 'vue-katex'
+
+// Vue.use(VueKatex)
 
 Vue.config.productionTip = false
 

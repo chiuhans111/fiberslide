@@ -268,6 +268,15 @@
         <h6 slot="parent">
           <span>架構</span>
           <span>：</span>
+          <span>一般光纖WGM</span>
+        </h6>
+
+        <img src="@/assets/arch1.png" alt />
+      </page>
+      <page>
+        <h6 slot="parent">
+          <span>架構</span>
+          <span>：</span>
           <span>微影製程步驟</span>
         </h6>
         <h4>

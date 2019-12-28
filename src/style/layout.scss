@@ -1,5 +1,5 @@
 .row {
-  justify-content: space-between;
+  justify-content: space-evenly;
   display: flex;
 
   &-center {
@@ -15,4 +15,17 @@
   position: absolute;
   left: 0%;
   top: 0%;
+}
+
+
+table{
+  width: 100%;
+  // table-layout: fixed;
+  font-size: 24px;
+  margin: auto;
+}
+
+td{
+  border: solid 1px gray;
+  padding: 12px;
 }

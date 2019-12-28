@@ -1,6 +1,8 @@
 <template>
   <div id="app" @click="nextPage">
     <display class="display" ref="display"></display>
+   
+
     <div class="content" ref="pages">
       <page class="left">
         <h1>
@@ -469,6 +471,7 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 
 .content {
   position: absolute;

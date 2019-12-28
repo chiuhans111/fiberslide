@@ -157,7 +157,7 @@ export default {
         from.map((x, i, arr) => {
           let delay = Math.pow(i / arr.length, 1.5) * x.time * 0.8;
           if (x.paired != null) delay += x.time / 4;
-          if (x.new) delay += x.time / 4;
+          if (x.new) delay += x.time / 8;
 
           safeTimeout(x.el, delay, () => {
             if (x.paired == null) {

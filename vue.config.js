@@ -6,7 +6,7 @@ module.exports = {
             template: './public/index.html'
         },
         'final': {
-            entry: './src/main.js',
+            entry: './src/final.js',
             title: 'theory',
             template: './public/index.html'
         }

@@ -557,6 +557,9 @@
         <h5>彎曲半徑對於位移變化的線性度：</h5>
         <div class="row center" style="height:45vh">
           <img src="@/assets/result_good_displacement.svg" alt />
+          <div class="col" >
+            <img src="@/assets/helps1.jpg" alt />
+          </div>
         </div>
         <table>
           <tr>
@@ -612,6 +615,9 @@
         <h5>波長位置對於半徑變化的線性度：</h5>
         <div class="row center" style="height:45vh">
           <img src="@/assets/result_good_wavelength.svg" alt />
+          <div class="col" >
+            <img src="@/assets/helps2.jpg" alt />
+          </div>
         </div>
         <table>
           <tr>

@@ -85,7 +85,6 @@
         <h6 slot="parent">
           <span>動機</span>
         </h6>
-        <p>基於 2009 年初步開發 WGM 感測系統 ...</p>
         <h2>目標</h2>
         <p>
           <span>1. 探討適合 WGM 感測器的</span>

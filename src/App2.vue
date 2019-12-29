@@ -32,7 +32,7 @@
         </h2>
         <h4>
           <span pkey="title_w">W</span>
-          <span>ispering</span>
+          <span>hispering</span>
           <span class="blank"></span>
           <span pkey="title_g">G</span>
           <span>allery</span>

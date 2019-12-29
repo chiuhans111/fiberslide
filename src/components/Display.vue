@@ -49,6 +49,8 @@ function putBackRefer(x) {
   x.el.display_refer = null;
 }
 
+var lastGoto = null;
+
 export default {
   name: "Display",
   data() {
@@ -58,6 +60,12 @@ export default {
   },
   methods: {
     goto(element) {
+      let speed = false;
+      let now = new Date().getTime();
+      if (lastGoto != null && now - lastGoto < 500) speed = true;
+
+      lastGoto = now;
+
       let from = getAllElement(this.$refs.main).map(x => {
         if (x.timeout != null) clearTimeout(x.timeout);
 
@@ -159,6 +167,8 @@ export default {
           if (x.paired != null) delay += x.time / 4;
           if (x.new) delay += x.time / 8;
 
+          if (speed) delay = 0;
+
           safeTimeout(x.el, delay, () => {
             if (x.paired == null) {
               x.el.setAttribute("kill", "true");
@@ -232,11 +242,15 @@ export default {
                   x.el.style.transform = "translate(0, 0)";
                   x.el.style.opacity = targetStyle.opacity;
                   x.el.style.transition =
-                    "all " + x.time / 1000 + "s cubic-bezier(0.5,0,0.2,1)";
+                    "all " +
+                    (speed ? 0.1 : x.time / 1000) +
+                    "s cubic-bezier(0.5,0,0.2,1)";
                 });
               } else
                 x.el.style.transition =
-                  "all " + x.time / 1000 + "s cubic-bezier(0.5,0,0.2,1)";
+                  "all " +
+                  (speed ? 0.1 : x.time / 1000) +
+                  "s cubic-bezier(0.5,0,0.2,1)";
 
               if (x.complex != "true") x.el.innerHTML = x.paired.el.innerHTML;
 

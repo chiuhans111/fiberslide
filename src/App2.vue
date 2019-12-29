@@ -72,7 +72,7 @@
         <p>
           <span>2. 可用於</span>
           <strong>溫度感測</strong>
-          <span>，對升溫靈敏度 2.122nm/°C，降溫靈敏度 2.438nm/°C。</span>
+          <span>，對升溫靈敏度 2.122nm/°C，降溫靈敏度 2.438nm/°C。</span>
         </p>
         <br />
         <br />

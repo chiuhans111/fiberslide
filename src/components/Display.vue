@@ -68,7 +68,7 @@ export default {
           paired: null,
           key: getKey(x),
           kill: x.getAttribute("kill"),
-          time: x.getAttribute("time") || 500,
+          time: x.getAttribute("time") || 400,
           complex: x.getAttribute("complex")
         };
       });
@@ -83,7 +83,7 @@ export default {
           el: x,
           paired: null,
           key: getKey(x),
-          time: x.getAttribute("time") || 500,
+          time: x.getAttribute("time") || 400,
           complex: x.getAttribute("complex")
         };
       });

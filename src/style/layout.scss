@@ -17,15 +17,18 @@
   top: 0%;
 }
 
-
-table{
+table {
   width: 100%;
   // table-layout: fixed;
   font-size: 24px;
   margin: auto;
 }
 
-td{
+td {
   border: solid 1px gray;
   padding: 12px;
+}
+
+.dropshadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }

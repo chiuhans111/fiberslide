@@ -19,6 +19,16 @@
         <p>光電三 106650004 邱柏翰</p>
       </page>
 
+      <page class="left">
+        <h6 slot="parent">
+          <span>論文來源</span>
+        </h6>
+
+        <div class="row" style="height:80vh">
+          <img src="@/assets/cover.jpg" class="dropshadow" alt />
+        </div>
+      </page>
+
       <page>
         <h3>
           <span>摘要與動機</span>
@@ -26,7 +36,7 @@
         <p>INTRODUCTION</p>
       </page>
 
-      <page>
+      <!-- <page>
         <h2>
           <span>回音廊模態</span>
         </h2>
@@ -47,7 +57,7 @@
             class="quote"
           >Photography: Matthew Biddulp / St Paul's Cathedral from the Whispering Gallery/</p>
         </div>
-      </page>
+      </page>-->
 
       <page class="left">
         <h6 slot="parent">
@@ -557,7 +567,7 @@
         <h5>彎曲半徑對於位移變化的線性度：</h5>
         <div class="row center" style="height:45vh">
           <img src="@/assets/result_good_displacement.svg" alt />
-          <div class="col" >
+          <div class="col">
             <img src="@/assets/helps1.jpg" alt />
           </div>
         </div>
@@ -615,7 +625,7 @@
         <h5>波長位置對於半徑變化的線性度：</h5>
         <div class="row center" style="height:45vh">
           <img src="@/assets/result_good_wavelength.svg" alt />
-          <div class="col" >
+          <div class="col">
             <img src="@/assets/helps2.jpg" alt />
           </div>
         </div>
@@ -757,6 +767,22 @@
           <strong time="500">1500~1600nm</strong>
           <span time="500">。</span>
         </p>
+        <p>
+          <span time="500">靈敏度</span>
+          <strong>
+            <span time="500">1795 nm/mm</span>
+          </strong>
+          <span time="500">，半徑範圍</span>
+          <strong time="500">5.09mm~6.51mm</strong>
+          <span time="500">。</span>
+        </p>
+        <br />
+
+        <div class="row" style="height: 30vh">
+          <img src="@/assets/fiber2.png" alt />
+          <img src="@/assets/result.png" alt />
+          <img src="@/assets/result_line.jpg" alt />
+        </div>
 
         <div slot="footer">
           <h6>論文來源</h6>
@@ -764,12 +790,12 @@
             國立高雄應用科技大學
             機械與精密工程研究所 碩士論文 -
             光纖回音廊模態感測器之製作及應用
-            <br />Fabrication and Application of the Optical Fiber Sensor
+            <!-- <br />Fabrication and Application of the Optical Fiber Sensor
             Based on Bending Induced Whispering
-            Gallery Mode
-            <br />研究生：黃建彰
-            指導教授：江家慶博士
-            <br />中華民國 100 年 7 月
+            Gallery Mode -->
+            <br />
+            研究生：黃建彰
+            指導教授：江家慶博士，中華民國 100 年 7 月
           </p>
         </div>
       </page>

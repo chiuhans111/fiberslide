@@ -1,6 +1,7 @@
 <template>
   <div id="app" @click="nextPage">
     <display class="display" ref="display"></display>
+    <div class="timer">{{timer}}</div>
     <div class="content" ref="pages">
       <page class="left">
         <h1>
@@ -792,9 +793,8 @@
             光纖回音廊模態感測器之製作及應用
             <!-- <br />Fabrication and Application of the Optical Fiber Sensor
             Based on Bending Induced Whispering
-            Gallery Mode -->
-            <br />
-            研究生：黃建彰
+            Gallery Mode-->
+            <br />研究生：黃建彰
             指導教授：江家慶博士，中華民國 100 年 7 月
           </p>
         </div>
@@ -839,7 +839,9 @@ export default {
       animation_id: null,
       time: 0,
       page_count: getCookie("pagecount") || 0,
-      len: 0
+      len: 0,
+
+      startTime: 0,
     };
   },
   components: {
@@ -848,11 +850,23 @@ export default {
     demo1
     // background
   },
-  computed: {},
+  computed: {
+    timer() {
+      let time = this.time - this.startTime
+      if(time<0 )time=0
+      let second = Math.floor(time/1000);
+      let minute = Math.floor(second/60);
+      second = second%60
+
+      return minute+" : "+second
+    }
+  },
 
   methods: {
     update() {
       this.time = new Date().getTime();
+      if(this.page_count==0) this.startTime = this.time
+
     },
     pagenum(x) {
       return this.page_count == x;
@@ -866,7 +880,6 @@ export default {
     goPage(p) {
       if (isNaN(p)) p = 0;
       p = Math.floor(p);
-
       // if (p < 0) p = 0;
       // if (p >= this.len) p = this.len - 1;
 
@@ -899,6 +912,8 @@ export default {
   mounted() {
     this.len = this.$refs.pages.children.length;
     this.goPage(this.page_count);
+    var me = this
+    
   },
   destroyed() {
     clearInterval(this.animation_id);
@@ -956,4 +971,13 @@ export default {
     overflow: unset;
   }
 }
+
+.timer{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  padding: 8px;
+}
+
 </style>

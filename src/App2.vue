@@ -841,7 +841,7 @@ export default {
       page_count: getCookie("pagecount") || 0,
       len: 0,
 
-      startTime: 0,
+      startTime: 0
     };
   },
   components: {
@@ -852,21 +852,20 @@ export default {
   },
   computed: {
     timer() {
-      let time = this.time - this.startTime
-      if(time<0 )time=0
-      let second = Math.floor(time/1000);
-      let minute = Math.floor(second/60);
-      second = second%60
+      let time = this.time - this.startTime;
+      if (time < 0) time = 0;
+      let second = Math.floor(time / 1000);
+      let minute = Math.floor(second / 60);
+      second = second % 60;
 
-      return minute+" : "+second
+      return minute + " : " + second;
     }
   },
 
   methods: {
     update() {
       this.time = new Date().getTime();
-      if(this.page_count==0) this.startTime = this.time
-
+      if (this.page_count == 0) this.startTime = this.time;
     },
     pagenum(x) {
       return this.page_count == x;
@@ -912,8 +911,7 @@ export default {
   mounted() {
     this.len = this.$refs.pages.children.length;
     this.goPage(this.page_count);
-    var me = this
-    
+    var me = this;
   },
   destroyed() {
     clearInterval(this.animation_id);
@@ -972,12 +970,11 @@ export default {
   }
 }
 
-.timer{
+.timer {
   position: absolute;
   right: 0;
   top: 0;
   font-size: 20px;
   padding: 8px;
 }
-
 </style>
